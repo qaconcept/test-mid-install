@@ -1,3 +1,4 @@
+  
 version: '3'
 
 services:
@@ -10,6 +11,6 @@ services:
         - SN_USER=${SN_USER}
         - SN_PASSWD=${SN_PASSWD}
         - SN_MID_NAME=${SN_MID_NAME}
-      image: $SN_IMAGE_NAME
-      env_file:
-        - .env
+    image: $SN_IMAGE_NAME
+    env_file:
+      - .env
