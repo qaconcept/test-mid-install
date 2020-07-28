@@ -1,5 +1,5 @@
 #retrieve sn-mid-name & sn-instance from .env file
-$mid= Get-Content -Path .\.env | Where-Object {$_ like '*SN_MID_NAME=*'}
+$mid= Get-Content -Path .\.env | Where-Object {$_ -like '*SN_MID_NAME=*'}
 $midname=$mid -replace ".*="
 $instance= Get-Content -Path .\.env | Where-Object {$_ -like '*SN_INSTANCE=*'}
 $instancename=$instance -replace ".*="
