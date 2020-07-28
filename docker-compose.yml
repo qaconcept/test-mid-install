@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  sn_midserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - SN_INSTANCE=${SN_INSTANCE}
+        - SN_USER=${SN_USER}
+        - SN_PASSWD=${SN_PASSWD}
+        - SN_MID_NAME=${SN_MID_NAME}
+      image: $SN_IMAGE_NAME
+      env_file:
+        - .env
